@@ -1,0 +1,414 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testing" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="testing_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.CV</x:String>
+      <x:String>UiPath.CV.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.CV.Activities.Interfaces</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testing" sap:VirtualizedContainerService.HintSize="762,660" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="9726a13d-c8a3-4aae-8987-569d063f64ef" DisplayName="CV Screen Scope 'DIV'" sap:VirtualizedContainerService.HintSize="450,527" sap2010:WorkflowViewState.IdRef="CVScope_1" SendOnPremData="False" Version="V6">
+      <p:CVScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DesignTimeScaleFactor="{x:Null}" ScrollOffset="{x:Null}" DisplayName="CV Get Text" sap:VirtualizedContainerService.HintSize="400,177" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_1" NumberOfScrolls="2" RefreshBefore="True" ScrollDirection="Down" Version="V6" />
+          </Sequence>
+        </ActivityAction>
+      </p:CVScope.Body>
+      <p:CVScope.DesignTimeCacheContainer>
+        <uc:CvCacheContainer>
+          <uc:CvCacheContainer.Caches>
+            <scg:List x:TypeArguments="uc:CVCache" Capacity="1">
+              <uc:CVCache DataSent="False" DisplayName="Main Screen" Id="9726a13d-c8a3-4aae-8987-569d063f64ef" InformativeScreenshot="26e98d1f417d320b587c5427af805c73" LogicalPosition="4, 182" OcrText="Business Analyst jobs in Remote X Sort by: relevance - date 100+ jobs ? Business Analyst - Netsuite A.E.W. Limited Partnership British Columbia $80,000-$100,000 a year New Business Analyst - Netsuite Apply now G A.E.W. Limited Partnership British Columbia activities of others within the Nlaka pamux homeland including transportation, mining, forestry, oil and gas, and utilities projects. The Nlaka'pamux Nation Tribal $80,000-$100,000 a year Full-time Council is not opposed to development within our homeland, but developments Paid time off Dental care Life insurance and activities must be consistent with pamux title and rights. Easily apply Interested in viewing more information on AEW LP? Please visit our website at www.aewlp.ca or our Linkedin https://www.linkedin.com/company/aew-limited- partnership/ Product Analyst The Mutual Fire Insurance Company of British... Why Work with Us? Hybrid work in Langley, BC V1M 4B3 A.E.W. LP is guided by a commitment to uphold Nlaka'pamux rights and $50,000-$60,000 a year Full-time +1 environmental integrity. You will directly contribute to projects that respect and reinforce Nlaka'pamux values. We foster a supportive team environment where Tuition reimbursement Vision care Dental care all voices are valued, and knowledge sharing is encouraged. We offer flexible Easily apply" Position="4, 182" ScreenshotGuid="9f5a7d73-f69c-499c-9a63-0f86397968fb" ServerVersion="24.10.5.1">
+                <uc:CVCache.CvAnchorRelations>
+                  <scg:List x:TypeArguments="uc:AnchorRelationInfo" Capacity="4">
+                    <uc:AnchorRelationInfo IsTargetText="True" Target="35">
+                      <uc:AnchorRelationInfo.Anchors>
+                        <x:Array Type="x:Int32">
+                          <x:Int32>27</x:Int32>
+                          <x:Int32>28</x:Int32>
+                          <x:Int32>29</x:Int32>
+                          <x:Int32>30</x:Int32>
+                        </x:Array>
+                      </uc:AnchorRelationInfo.Anchors>
+                    </uc:AnchorRelationInfo>
+                  </scg:List>
+                </uc:CVCache.CvAnchorRelations>
+                <uc:CVCache.CvUiElements>
+                  <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="64">
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="626, 132, 116, 48" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="542, 160, 24, 24" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="295, 262, 96, 30" />
+                    <uc:CvElementInfo Category="CloseButton" Description="CloseButton" Region="1217, 29, 17, 16" />
+                    <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="1229, 206, 20, 20" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="814, 131, 49, 48" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="384, 231, 81, 30" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="458, 495, 96, 30" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="365, 495, 92, 29" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="873, 131, 50, 48" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="376, 464, 102, 30" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="542, 424, 25, 25" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="391, 262, 115, 30" />
+                    <uc:CvElementInfo Category="ArrowButton" Description="ArrowButton" Region="1229, 526, 19, 21" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="753, 131, 49, 48" />
+                    <uc:CvElementInfo Category="Icon" Description="save icon" Region="543, 115, 23, 25" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="191, 307, 22, 20" />
+                    <uc:CvElementInfo Category="Icon" Description="question mark icon" Region="547, 55, 21, 21" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="191, 541, 22, 19" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="192, 495, 173, 29" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="191, 262, 103, 30" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="192, 111, 46, 26" />
+                    <uc:CvElementInfo Category="Icon" Description="save icon" Region="543, 380, 23, 25" />
+                    <uc:CvElementInfo Category="Button" Description="Button" Region="191, 464, 184, 30" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="824, 142, 27, 27" />
+                    <uc:CvElementInfo Category="Icon" Description="save icon" Region="765, 140, 26, 28" />
+                    <uc:CvElementInfo Category="InputBox" Description="Inputbox" Region="191, 231, 192, 30" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="884, 144, 28, 22" />
+                    <uc:CvElementInfo Category="Icon" Description="Icon" Region="799, 98, 15, 16" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="191, 231, 192, 30" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="191, 464, 184, 29" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="CheckBox" Confidence="Runtime" Region="800, 98, 15, 15" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="191, 111, 46, 26" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="191, 307, 23, 20" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="191, 541, 22, 19" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="628, 94, 187, 24" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="CheckBox" Confidence="Runtime" Region="544, 116, 21, 23" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Icon" Confidence="Runtime" Region="450, 473, 16, 15" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="822, 93, 125, 26" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="547, 55, 21, 21" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="Button" Confidence="Runtime" Region="626, 93, 191, 25" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="391, 262, 114, 30" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="CheckBox" Confidence="Runtime" Region="544, 381, 21, 24" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="606, 169, 640, 381" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="541, 423, 28, 28" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="RadioButton" Confidence="Runtime" Region="543, 425, 24, 24" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="ArrowButton" Confidence="Runtime" Region="1215, 27, 21, 20" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="InputBox" Confidence="Runtime" Region="384, 232, 81, 29" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="CloseButton" Confidence="Runtime" Region="544, 380, 22, 25" />
+                    <uc:CvElementInfo Description="{x:Null}" Category="CloseButton" Confidence="Runtime" Region="544, 116, 22, 23" />
+                  </scg:List>
+                </uc:CVCache.CvUiElements>
+                <uc:CVCache.OcrTexts>
+                  <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="192">
+                    <uc:OcrTextInfo Region="190, 25, 51, 12" Text="Business" />
+                    <uc:OcrTextInfo Region="242, 25, 43, 14" Text="Analyst" />
+                    <uc:OcrTextInfo Region="285, 25, 25, 14" Text="jobs" />
+                    <uc:OcrTextInfo Region="311, 25, 11, 12" Text="in" />
+                    <uc:OcrTextInfo Region="324, 26, 45, 11" Text="Remote" />
+                    <uc:OcrTextInfo Region="1220, 32, 11, 11" Text="X" />
+                    <uc:OcrTextInfo Region="190, 59, 29, 13" Text="Sort" />
+                    <uc:OcrTextInfo Region="220, 59, 21, 16" Text="by:" />
+                    <uc:OcrTextInfo Region="244, 59, 66, 13" Text="relevance" />
+                    <uc:OcrTextInfo Region="312, 61, 7, 10" Text="-" />
+                    <uc:OcrTextInfo Region="321, 59, 31, 13" Text="date" />
+                    <uc:OcrTextInfo Region="486, 61, 29, 11" Text="100+" />
+                    <uc:OcrTextInfo Region="516, 60, 26, 14" Text="jobs" />
+                    <uc:OcrTextInfo Region="553, 59, 9, 13" Text="?" />
+                    <uc:OcrTextInfo Region="626, 61, 92, 20" Text="Business" />
+                    <uc:OcrTextInfo Region="720, 61, 81, 25" Text="Analyst" />
+                    <uc:OcrTextInfo Region="804, 64, 10, 17" Text="-" />
+                    <uc:OcrTextInfo Region="818, 61, 90, 21" Text="Netsuite" />
+                    <uc:OcrTextInfo Region="625, 100, 42, 13" Text="A.E.W." />
+                    <uc:OcrTextInfo Region="668, 100, 50, 13" Text="Limited" />
+                    <uc:OcrTextInfo Region="719, 100, 77, 15" Text="Partnership" />
+                    <uc:OcrTextInfo Region="831, 100, 43, 13" Text="British" />
+                    <uc:OcrTextInfo Region="876, 100, 62, 13" Text="Columbia" />
+                    <uc:OcrTextInfo Region="956, 99, 147, 17" Text="$80,000-$100,000" />
+                    <uc:OcrTextInfo Region="1104, 103, 10, 11" Text="a" />
+                    <uc:OcrTextInfo Region="1116, 103, 34, 15" Text="year" />
+                    <uc:OcrTextInfo Region="201, 118, 27, 11" Text="New" />
+                    <uc:OcrTextInfo Region="192, 148, 76, 16" Text="Business" />
+                    <uc:OcrTextInfo Region="269, 148, 68, 20" Text="Analyst" />
+                    <uc:OcrTextInfo Region="339, 150, 8, 13" Text="-" />
+                    <uc:OcrTextInfo Region="350, 148, 74, 16" Text="Netsuite" />
+                    <uc:OcrTextInfo Region="640, 148, 49, 19" Text="Apply" />
+                    <uc:OcrTextInfo Region="689, 151, 36, 13" Text="now" />
+                    <uc:OcrTextInfo Region="886, 148, 23, 14" Text="G" />
+                    <uc:OcrTextInfo Region="191, 182, 42, 13" Text="A.E.W." />
+                    <uc:OcrTextInfo Region="234, 182, 50, 13" Text="Limited" />
+                    <uc:OcrTextInfo Region="285, 182, 77, 16" Text="Partnership" />
+                    <uc:OcrTextInfo Region="192, 202, 42, 13" Text="British" />
+                    <uc:OcrTextInfo Region="236, 202, 63, 13" Text="Columbia" />
+                    <uc:OcrTextInfo Region="625, 203, 67, 15" Text="activities" />
+                    <uc:OcrTextInfo Region="694, 204, 18, 14" Text="of" />
+                    <uc:OcrTextInfo Region="713, 204, 50, 14" Text="others" />
+                    <uc:OcrTextInfo Region="765, 204, 48, 14" Text="within" />
+                    <uc:OcrTextInfo Region="814, 204, 27, 14" Text="the" />
+                    <uc:OcrTextInfo Region="843, 204, 43, 14" Text="Nlaka" />
+                    <uc:OcrTextInfo Region="888, 206, 52, 15" Text="pamux" />
+                    <uc:OcrTextInfo Region="942, 203, 76, 15" Text="homeland" />
+                    <uc:OcrTextInfo Region="1020, 203, 69, 18" Text="including" />
+                    <uc:OcrTextInfo Region="1090, 204, 115, 17" Text="transportation," />
+                    <uc:OcrTextInfo Region="625, 228, 56, 17" Text="mining," />
+                    <uc:OcrTextInfo Region="684, 227, 63, 18" Text="forestry," />
+                    <uc:OcrTextInfo Region="749, 227, 18, 15" Text="oil" />
+                    <uc:OcrTextInfo Region="769, 227, 30, 15" Text="and" />
+                    <uc:OcrTextInfo Region="801, 231, 31, 14" Text="gas," />
+                    <uc:OcrTextInfo Region="834, 227, 29, 15" Text="and" />
+                    <uc:OcrTextInfo Region="865, 227, 55, 15" Text="utilities" />
+                    <uc:OcrTextInfo Region="922, 228, 65, 17" Text="projects." />
+                    <uc:OcrTextInfo Region="988, 228, 31, 14" Text="The" />
+                    <uc:OcrTextInfo Region="1021, 227, 97, 18" Text="Nlaka'pamux" />
+                    <uc:OcrTextInfo Region="1120, 228, 51, 14" Text="Nation" />
+                    <uc:OcrTextInfo Region="1173, 227, 42, 15" Text="Tribal" />
+                    <uc:OcrTextInfo Region="199, 239, 133, 17" Text="$80,000-$100,000" />
+                    <uc:OcrTextInfo Region="332, 243, 9, 10" Text="a" />
+                    <uc:OcrTextInfo Region="342, 243, 33, 13" Text="year" />
+                    <uc:OcrTextInfo Region="393, 240, 63, 13" Text="Full-time" />
+                    <uc:OcrTextInfo Region="625, 251, 57, 15" Text="Council" />
+                    <uc:OcrTextInfo Region="684, 251, 13, 15" Text="is" />
+                    <uc:OcrTextInfo Region="699, 253, 27, 13" Text="not" />
+                    <uc:OcrTextInfo Region="728, 251, 66, 18" Text="opposed" />
+                    <uc:OcrTextInfo Region="795, 252, 18, 14" Text="to" />
+                    <uc:OcrTextInfo Region="815, 251, 100, 18" Text="development" />
+                    <uc:OcrTextInfo Region="917, 251, 47, 15" Text="within" />
+                    <uc:OcrTextInfo Region="966, 255, 27, 11" Text="our" />
+                    <uc:OcrTextInfo Region="995, 251, 80, 17" Text="homeland," />
+                    <uc:OcrTextInfo Region="1077, 251, 27, 15" Text="but" />
+                    <uc:OcrTextInfo Region="1105, 251, 108, 18" Text="developments" />
+                    <uc:OcrTextInfo Region="200, 271, 29, 13" Text="Paid" />
+                    <uc:OcrTextInfo Region="231, 271, 32, 13" Text="time" />
+                    <uc:OcrTextInfo Region="264, 270, 22, 14" Text="off" />
+                    <uc:OcrTextInfo Region="304, 271, 46, 13" Text="Dental" />
+                    <uc:OcrTextInfo Region="352, 274, 30, 10" Text="care" />
+                    <uc:OcrTextInfo Region="400, 271, 27, 13" Text="Life" />
+                    <uc:OcrTextInfo Region="428, 270, 68, 14" Text="insurance" />
+                    <uc:OcrTextInfo Region="625, 275, 30, 15" Text="and" />
+                    <uc:OcrTextInfo Region="657, 276, 67, 14" Text="activities" />
+                    <uc:OcrTextInfo Region="726, 276, 39, 14" Text="must" />
+                    <uc:OcrTextInfo Region="767, 275, 20, 15" Text="be" />
+                    <uc:OcrTextInfo Region="788, 276, 80, 14" Text="consistent" />
+                    <uc:OcrTextInfo Region="869, 275, 34, 15" Text="with" />
+                    <uc:OcrTextInfo Region="950, 278, 52, 15" Text="pamux" />
+                    <uc:OcrTextInfo Region="1004, 276, 30, 14" Text="title" />
+                    <uc:OcrTextInfo Region="1036, 275, 29, 15" Text="and" />
+                    <uc:OcrTextInfo Region="1068, 275, 48, 18" Text="rights." />
+                    <uc:OcrTextInfo Region="216, 310, 37, 16" Text="Easily" />
+                    <uc:OcrTextInfo Region="255, 310, 37, 16" Text="apply" />
+                    <uc:OcrTextInfo Region="626, 316, 77, 14" Text="Interested" />
+                    <uc:OcrTextInfo Region="705, 316, 15, 14" Text="in" />
+                    <uc:OcrTextInfo Region="721, 315, 59, 18" Text="viewing" />
+                    <uc:OcrTextInfo Region="783, 319, 40, 11" Text="more" />
+                    <uc:OcrTextInfo Region="825, 315, 89, 15" Text="information" />
+                    <uc:OcrTextInfo Region="916, 319, 20, 11" Text="on" />
+                    <uc:OcrTextInfo Region="938, 316, 39, 14" Text="AEW" />
+                    <uc:OcrTextInfo Region="979, 316, 27, 14" Text="LP?" />
+                    <uc:OcrTextInfo Region="1008, 315, 49, 15" Text="Please" />
+                    <uc:OcrTextInfo Region="1058, 316, 32, 14" Text="visit" />
+                    <uc:OcrTextInfo Region="1092, 319, 27, 11" Text="our" />
+                    <uc:OcrTextInfo Region="1121, 315, 59, 15" Text="website" />
+                    <uc:OcrTextInfo Region="1182, 317, 16, 13" Text="at" />
+                    <uc:OcrTextInfo Region="625, 339, 107, 18" Text="www.aewlp.ca" />
+                    <uc:OcrTextInfo Region="735, 343, 18, 11" Text="or" />
+                    <uc:OcrTextInfo Region="754, 343, 28, 11" Text="our" />
+                    <uc:OcrTextInfo Region="784, 339, 64, 15" Text="Linkedin" />
+                    <uc:OcrTextInfo Region="848, 339, 365, 18" Text="https://www.linkedin.com/company/aew-limited-" />
+                    <uc:OcrTextInfo Region="626, 363, 93, 18" Text="partnership/" />
+                    <uc:OcrTextInfo Region="192, 381, 69, 16" Text="Product" />
+                    <uc:OcrTextInfo Region="263, 380, 67, 21" Text="Analyst" />
+                    <uc:OcrTextInfo Region="191, 415, 27, 13" Text="The" />
+                    <uc:OcrTextInfo Region="219, 415, 47, 13" Text="Mutual" />
+                    <uc:OcrTextInfo Region="268, 415, 25, 13" Text="Fire" />
+                    <uc:OcrTextInfo Region="295, 415, 65, 13" Text="Insurance" />
+                    <uc:OcrTextInfo Region="361, 415, 64, 16" Text="Company" />
+                    <uc:OcrTextInfo Region="426, 415, 16, 13" Text="of" />
+                    <uc:OcrTextInfo Region="443, 415, 53, 13" Text="British..." />
+                    <uc:OcrTextInfo Region="625, 403, 38, 18" Text="Why" />
+                    <uc:OcrTextInfo Region="664, 403, 45, 15" Text="Work" />
+                    <uc:OcrTextInfo Region="709, 403, 37, 15" Text="with" />
+                    <uc:OcrTextInfo Region="748, 404, 28, 14" Text="Us?" />
+                    <uc:OcrTextInfo Region="192, 435, 45, 16" Text="Hybrid" />
+                    <uc:OcrTextInfo Region="238, 435, 35, 13" Text="work" />
+                    <uc:OcrTextInfo Region="274, 435, 13, 13" Text="in" />
+                    <uc:OcrTextInfo Region="289, 435, 54, 16" Text="Langley," />
+                    <uc:OcrTextInfo Region="345, 435, 19, 13" Text="BC" />
+                    <uc:OcrTextInfo Region="365, 435, 29, 13" Text="V1M" />
+                    <uc:OcrTextInfo Region="396, 435, 27, 13" Text="4B3" />
+                    <uc:OcrTextInfo Region="625, 444, 47, 14" Text="A.E.W." />
+                    <uc:OcrTextInfo Region="674, 444, 20, 14" Text="LP" />
+                    <uc:OcrTextInfo Region="696, 444, 12, 14" Text="is" />
+                    <uc:OcrTextInfo Region="710, 443, 53, 18" Text="guided" />
+                    <uc:OcrTextInfo Region="765, 443, 20, 18" Text="by" />
+                    <uc:OcrTextInfo Region="786, 447, 10, 11" Text="a" />
+                    <uc:OcrTextInfo Region="798, 444, 97, 14" Text="commitment" />
+                    <uc:OcrTextInfo Region="896, 445, 18, 13" Text="to" />
+                    <uc:OcrTextInfo Region="916, 443, 53, 18" Text="uphold" />
+                    <uc:OcrTextInfo Region="972, 443, 97, 18" Text="Nlaka'pamux" />
+                    <uc:OcrTextInfo Region="1071, 443, 44, 18" Text="rights" />
+                    <uc:OcrTextInfo Region="1117, 443, 30, 15" Text="and" />
+                    <uc:OcrTextInfo Region="199, 472, 124, 16" Text="$50,000-$60,000" />
+                    <uc:OcrTextInfo Region="324, 476, 9, 10" Text="a" />
+                    <uc:OcrTextInfo Region="334, 476, 33, 13" Text="year" />
+                    <uc:OcrTextInfo Region="385, 472, 63, 14" Text="Full-time" />
+                    <uc:OcrTextInfo Region="450, 474, 14, 11" Text="+1" />
+                    <uc:OcrTextInfo Region="625, 467, 110, 15" Text="environmental" />
+                    <uc:OcrTextInfo Region="737, 468, 67, 17" Text="integrity." />
+                    <uc:OcrTextInfo Region="805, 468, 30, 14" Text="You" />
+                    <uc:OcrTextInfo Region="837, 467, 26, 15" Text="will" />
+                    <uc:OcrTextInfo Region="865, 467, 57, 18" Text="directly" />
+                    <uc:OcrTextInfo Region="924, 467, 79, 15" Text="contribute" />
+                    <uc:OcrTextInfo Region="1004, 468, 18, 14" Text="to" />
+                    <uc:OcrTextInfo Region="1024, 468, 61, 17" Text="projects" />
+                    <uc:OcrTextInfo Region="1087, 467, 32, 15" Text="that" />
+                    <uc:OcrTextInfo Region="1121, 469, 57, 16" Text="respect" />
+                    <uc:OcrTextInfo Region="1180, 467, 28, 15" Text="and" />
+                    <uc:OcrTextInfo Region="625, 491, 69, 15" Text="reinforce" />
+                    <uc:OcrTextInfo Region="697, 492, 97, 17" Text="Nlaka'pamux" />
+                    <uc:OcrTextInfo Region="795, 491, 53, 15" Text="values." />
+                    <uc:OcrTextInfo Region="850, 492, 25, 14" Text="We" />
+                    <uc:OcrTextInfo Region="877, 491, 46, 15" Text="foster" />
+                    <uc:OcrTextInfo Region="925, 495, 10, 11" Text="a" />
+                    <uc:OcrTextInfo Region="937, 492, 81, 17" Text="supportive" />
+                    <uc:OcrTextInfo Region="1020, 493, 39, 13" Text="team" />
+                    <uc:OcrTextInfo Region="1061, 492, 98, 14" Text="environment" />
+                    <uc:OcrTextInfo Region="1161, 491, 47, 15" Text="where" />
+                    <uc:OcrTextInfo Region="199, 504, 49, 13" Text="Tuition" />
+                    <uc:OcrTextInfo Region="250, 504, 106, 13" Text="reimbursement" />
+                    <uc:OcrTextInfo Region="373, 504, 44, 13" Text="Vision" />
+                    <uc:OcrTextInfo Region="418, 507, 31, 10" Text="care" />
+                    <uc:OcrTextInfo Region="467, 504, 46, 13" Text="Dental" />
+                    <uc:OcrTextInfo Region="515, 507, 30, 10" Text="care" />
+                    <uc:OcrTextInfo Region="625, 515, 18, 15" Text="all" />
+                    <uc:OcrTextInfo Region="645, 516, 48, 14" Text="voices" />
+                    <uc:OcrTextInfo Region="695, 519, 25, 11" Text="are" />
+                    <uc:OcrTextInfo Region="722, 515, 54, 17" Text="valued," />
+                    <uc:OcrTextInfo Region="778, 515, 30, 15" Text="and" />
+                    <uc:OcrTextInfo Region="810, 515, 83, 18" Text="knowledge" />
+                    <uc:OcrTextInfo Region="895, 515, 57, 18" Text="sharing" />
+                    <uc:OcrTextInfo Region="954, 515, 13, 15" Text="is" />
+                    <uc:OcrTextInfo Region="969, 515, 95, 18" Text="encouraged." />
+                    <uc:OcrTextInfo Region="1066, 516, 25, 14" Text="We" />
+                    <uc:OcrTextInfo Region="1093, 515, 38, 15" Text="offer" />
+                    <uc:OcrTextInfo Region="1133, 515, 55, 15" Text="flexible" />
+                    <uc:OcrTextInfo Region="216, 543, 38, 16" Text="Easily" />
+                    <uc:OcrTextInfo Region="255, 543, 37, 16" Text="apply" />
+                  </scg:List>
+                </uc:CVCache.OcrTexts>
+              </uc:CVCache>
+            </scg:List>
+          </uc:CvCacheContainer.Caches>
+        </uc:CvCacheContainer>
+      </p:CVScope.DesignTimeCacheContainer>
+      <p:CVScope.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+          <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,25" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_1" Image="[Image]" Language="en" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+        </ActivityFunc>
+      </p:CVScope.OCREngine>
+      <p:CVScope.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c5025a23-0008-4ee6-8c72-b3990605b4d9" InformativeScreenshot="95a4bc3cf0839f9a90c35a2038d340cc" Selector="&lt;html app='msedge.exe' title='Discover 100 Business Analyst Jobs and Work Opportunities in Remote | Indeed' /&gt;&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='5' parentid='jobsearch-JapanPage' tag='DIV' /&gt;" WaitForReady="INTERACTIVE">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+        </ui:Target>
+      </p:CVScope.Target>
+      <p:CVScope.UseLocalServer>
+        <InArgument x:TypeArguments="x:Boolean" />
+      </p:CVScope.UseLocalServer>
+    </p:CVScope>
+    <ui:GetValue ContinueOnError="{x:Null}" Value="{x:Null}" DisplayName="Get Text" sap:VirtualizedContainerService.HintSize="450,110" sap2010:WorkflowViewState.IdRef="GetValue_1">
+      <ui:GetValue.Target>
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="72f9f6f2-199c-4067-a516-9e389147aa5e">
+          <ui:Target.TimeoutMS>
+            <InArgument x:TypeArguments="x:Int32" />
+          </ui:Target.TimeoutMS>
+          <ui:Target.WaitForReady>
+            <InArgument x:TypeArguments="ui:WaitForReady" />
+          </ui:Target.WaitForReady>
+        </ui:Target>
+      </ui:GetValue.Target>
+    </ui:GetValue>
+  </Sequence>
+</Activity>
